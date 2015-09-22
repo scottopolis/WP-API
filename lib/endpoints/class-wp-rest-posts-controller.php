@@ -1051,7 +1051,8 @@ class WP_REST_Posts_Controller extends WP_REST_Controller {
 			if ( ! empty( $sizes ) ) {
 	
 				foreach ( $sizes as $size => &$size_data ) {
-					// Use the same method image_downsize() does
+
+					// Get source url for each size
 					$image_src = wp_get_attachment_image_src( $featured_id, $size );
 	
 					if ( ! $image_src ) {
